@@ -6,7 +6,7 @@
     <title>tour of dom  </title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        li{
+        .fruits-container li{
             color: tomato;
         }
         #fruirs-title{
@@ -34,7 +34,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits-title">Fruits I like</h1>
             <ul>
                 <li>apple</li>
@@ -57,21 +57,32 @@
         for(const li of liColection){
             // console.log(li.innerText)
         }
+
+        // ****5 ta option diye amra html code gula note pari--------
+        // option-1: getElementsByTagName
         const allHeaddings = document.getElementsByTagName('h1')
         for(const h1 of allHeaddings){
             // console.log(h1.innerText)
         }
-
+        // option-2: getElementById:
         const fruirsTitle = document.getElementById('fruits-title')
         fruirsTitle.innerText = 'fruits changed by js';
 
-
-        const otherPlace = document.getElementsByClassName('other-place')
-        otherPlace.innerText ='khalbon';
-
+        
+        
+        // option-3: getElementsByClassName:
         const places = document.getElementsByClassName('importent-place')
         for(const place of places ){
             console.log(place.innerText)
+        }
+        // option-4: querySelector
+        const someli = document.querySelector('.fruits-container li')
+        console.log(someli)
+        // optioin-5: querySelectorAll
+        const someli = document.querySelectorAll('.fruits-container li')
+        // console.log(someli)
+        for(const li of someli){
+            console.log(li.innerText);
         }
         
     </script>
@@ -80,9 +91,9 @@
 
 
 <!-- 
-1. arrray like object ki ?
-1.getElementByTagName ki?
-3.getElementsByTagName
+1.
+1.
+3.
 
 
 
