@@ -9,37 +9,71 @@
         li{
             color: tomato;
         }
+        #fruirs-title{
+            color: black;
+        }
+        .importent-place{
+            color: blue;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor vitae debitis? Placeat maxime accusamus beatae debitis. Repellat consectetur, earum voluptatibus in nobis impedit rem alias quis dolore eius illum.</p>
     </header>
     <main>
         <h1>MY Awesome DOM de baba</h1>
-        <ul>
-            <li>jalali set</li>
-            <li>Shafayet</li>
-            <li>bonobash</li>
-            <li>Dom de de re baba</li>
-        </ul>
-        <ul>
-            <li>apple</li>
-            <li>banana</li>
-            <li>carot</li>
-        </ul>
+        <section>
+            <h1>My awasome dom de baba </h1>
+            <ul>
+                <li >jalali set</li>
+                <li >Shafayet</li>
+                <li >bonobash</li>
+                <li>Dom de de re baba</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>apple</li>
+                <li>banana</li>
+                <li>carot</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Plase I like to visit </h1>
+            <li class="importent-place">sunderbon</li>
+            <li class="importent-place">bandorban</li>
+            <li class="importent-place">katabon</li>
+            <li class="other-place">salbon</li>
+        </section>
     </main>
     <script src="js/dom.js"></script>
     <script>
         const liColection = document.getElementsByTagName('li')
         // console.log(liColection);
         for(const li of liColection){
-            console.log(li.innerText)
+            // console.log(li.innerText)
         }
         const allHeaddings = document.getElementsByTagName('h1')
         for(const h1 of allHeaddings){
-            console.log(h1.innerText);
+            // console.log(h1.innerText)
         }
+
+        const fruirsTitle = document.getElementById('fruits-title')
+        fruirsTitle.innerText = 'fruits changed by js';
+
+
+        const otherPlace = document.getElementsByClassName('other-place')
+        otherPlace.innerText ='khalbon';
+
+        const places = document.getElementsByClassName('importent-place')
+        for(const place of places ){
+            console.log(place.innerText)
+        }
+        
     </script>
 </body>
 </html>
@@ -48,6 +82,7 @@
 <!-- 
 1. arrray like object ki ?
 1.getElementByTagName ki?
+3.getElementsByTagName
 
 
 
